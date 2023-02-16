@@ -1,0 +1,32 @@
+<div class="wrapper">
+  <ejs-spreadsheet #spreadsheet (created)="onCreate()" [height]="500">
+    <e-sheets>
+      <e-sheet>
+        <e-rows>
+          <e-row [height]="30">
+            <e-cells>
+              <e-cell value="Inventory List" colSpan="8"></e-cell>
+            </e-cells>
+          </e-row>
+        </e-rows>
+        <e-conditionalformats>
+          <e-conditionalformat type="LessThan" cFColor="RedFT" value="08/30/2019" range="G3:G15"></e-conditionalformat>
+          <e-conditionalformat type="GYRColorScale" range="C3:C15"></e-conditionalformat>
+        </e-conditionalformats>
+        <e-ranges>
+            <e-range [dataSource]="data" startCell="A2"></e-range>
+        </e-ranges>
+        <e-columns>
+            <e-column [width]=100></e-column>
+            <e-column [width]=130></e-column>
+            <e-column [width]=90></e-column>
+            <e-column [width]=90></e-column>
+            <e-column [width]=90></e-column>
+            <e-column [width]=120></e-column>
+            <e-column [width]=120></e-column>
+            <e-column [width]=90></e-column>
+        </e-columns>
+      </e-sheet>
+    </e-sheets>
+  </ejs-spreadsheet>
+</div>
